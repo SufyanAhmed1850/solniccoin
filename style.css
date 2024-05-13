@@ -1,0 +1,366 @@
+@font-face {
+    font-family: "wonder";
+    src: url("./assets/8-bit_wonder-webfont.woff") format("woff");
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "web";
+    src: url("./assets/web-font.woff2") format("woff");
+    font-weight: 400;
+    font-display: swap;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1920px;
+    overflow-x: hidden;
+    touch-action: pan-y;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    position: absolute;
+    top: 26px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+.logo {
+    width: 70px;
+}
+
+.logo img {
+    width: 100%;
+    display: block;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+p:not(.sol-mail),
+a {
+    text-decoration: none;
+    font-family: "wonder";
+    font-size: 12px;
+    font-weight: normal;
+    color: gold;
+    text-shadow: 0 2px 0 black;
+    text-align: center;
+    width: 100%;
+}
+
+.speaker-icon {
+    height: 20px;
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.speaker-icon img {
+    height: 100%;
+}
+
+main {
+    width: 99999999em;
+    padding-top: 270px;
+    background-color: #00207f;
+    overflow-x: hidden;
+    touch-action: pan-y;
+}
+
+.sky {
+    background-image: url(./assets/buh2.png);
+    height: 192px;
+}
+
+.ocean-sparkle {
+    position: relative;
+    top: -52px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    height: 19px;
+    margin-bottom: -19px;
+    width: 100%;
+    -webkit-animation: sparkle 1.5s steps(2, end) infinite;
+    animation: sparkle 1.5s steps(2, end) infinite;
+    background-image: url(./assets/ocean-sparkle.png);
+}
+
+@keyframes sparkle {
+    0% {
+        background-position: 0px 0px;
+    }
+
+    100% {
+        background-position: -20px 0px;
+    }
+}
+
+.mountains {
+    background-image: url(./assets/mountains.png);
+    height: 36px;
+}
+
+.lower-mountains {
+    background-image: url(./assets/lower-mountains.png);
+    height: 32px;
+}
+
+.tile-1 {
+    background-image: url(./assets/tile-3.png);
+    height: 11px;
+}
+
+.tile-2 {
+    background-image: url(./assets/tile-2.png);
+    height: 15px;
+}
+
+.tile-3 {
+    background-image: url(./assets/tile-3.png);
+    height: 24px;
+}
+
+.tile-4 {
+    background-image: url(./assets/tile-4.png);
+    height: 40px;
+}
+
+.tile-5 {
+    height: 95px;
+}
+
+.sonic-wrapper {
+    position: absolute;
+    top: 415px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.sonic {
+    background-image: url(./assets/stand.gif);
+    background-position: -1440px 0px;
+    width: 205px;
+    height: 205px;
+}
+
+.platform-wrapper {
+    position: relative;
+    margin-top: -690px;
+    transform: translate3d(-999999px, 0, 0);
+}
+
+.platform {
+    background-image: url(./assets/back1.gif);
+    height: 704px;
+    background-repeat: repeat-x;
+}
+
+.earth-tile {
+    background-image: url(./assets/earth-tile.png);
+    height: 500px;
+    background-repeat: repeat;
+}
+
+.going-up {
+    transition: transform 0.5s cubic-bezier(0.105, 0.51, 0.485, 1.1);
+    transform: translate(-50%, -240px);
+}
+
+.going-down {
+    transition: transform 0.48s cubic-bezier(0.47, 0, 0.745, 0.715);
+    transform: translate(-50%, 0);
+}
+
+.sky-wrapper>div {
+    transform: translate3d(-999999px, 0, 0);
+    transition: transform ease;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+    z-index: 999;
+    position: absolute;
+    top: 600px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1100px;
+    margin-bottom: 32px;
+}
+
+.score-wrapper {
+    align-self: flex-start;
+    display: flex;
+    gap: 16px;
+}
+
+.score-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.score-wrapper p {
+    font-size: 22px;
+    text-align: right;
+}
+
+.score-wrapper p:last-child {
+    color: #FFFFFF;
+}
+
+.score-sonic img {
+    width: 70px;
+}
+
+.footer-icons {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    background-color: #00000080;
+    border-radius: 16px;
+    padding: 6px 64px;
+}
+
+.footer-icons>div {
+    cursor: pointer;
+}
+
+.eagle {
+    height: 70px;
+}
+
+.eye {
+    height: 65px;
+}
+
+.square {
+    height: 65px;
+}
+
+
+.footer-icons img {
+    height: 100%;
+}
+
+.solnic-contract {
+    width: 80%;
+}
+
+.solnic-contract p {
+    font-size: 18px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+
+.solona-img {
+    width: 75%;
+    max-width: 325px;
+}
+
+.solona-img img {
+    width: 100%;
+}
+
+.sol-mail {
+    margin: 18px 0;
+    overflow-wrap: break-word;
+    pointer-events: auto;
+    font-family: Arial;
+    font-size: 16px;
+    color: rgb(0, 0, 198);
+    text-shadow: 0 0 1.5px #ffffff !important;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    line-height: 1.2;
+    text-indent: 0px;
+    word-spacing: 0px;
+    letter-spacing: 0px;
+}
+
+@media (width<=900px) {
+    header {
+        flex-direction: column;
+    }
+}
+
+@media (width<=800px) {
+    header {
+        gap: 18px;
+    }
+
+    .links {
+        flex-direction: column;
+    }
+
+    .logo {
+        display: none;
+    }
+}
+
+@media (width<=800px) {
+    header {
+        gap: 18px;
+    }
+
+    .links {
+        flex-direction: column;
+    }
+
+    .logo {
+        display: none;
+    }
+}
+
+@media (width<=500px) {
+    footer {
+        top: 650px;
+    }
+
+    .score-wrapper {
+        display: none;
+    }
+
+    .footer-icons {
+        display: flex;
+        align-items: center;
+        gap: 36px;
+        background-color: #00000080;
+        border-radius: 16px;
+        padding: 4px 24px;
+    }
+
+    .eagle {
+        height: 55px;
+    }
+
+    .eye {
+        height: 50px;
+    }
+
+    .square {
+        height: 50px;
+    }
+}
