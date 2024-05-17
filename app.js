@@ -123,7 +123,6 @@ const jump = (event, elem) => {
         !sonicWrapperElement.classList.contains("going-up") &&
         !sonicWrapperElement.classList.contains("going-down")
     ) {
-        console.log("Jump");
         sonicWrapperElement.classList.add("going-up");
         setTimeout(() => {
             sonicWrapperElement.classList.remove("going-up");
@@ -145,6 +144,7 @@ mainElement.addEventListener("click", (e) => jump(e, "main"));
 footerElement.addEventListener("click", (e) => jump(e, "footer"));
 let soundHandleImg = document.querySelector("#soundHandleImg");
 let audio = document.querySelector("#audio");
+audio.play();
 
 soundHandleImg.addEventListener("click", () => {
     if (audio.paused) {
